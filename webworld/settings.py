@@ -147,7 +147,10 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 STATIC_URL = 'static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR/'media'
-STATICFILES_DIRS = [STATIC_DIR,]
+STATICFILES_DIRS = [
+    BASE_DIR,'static'
+    # Add more paths if necessary
+]
 
 if not DEBUG:
     # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
